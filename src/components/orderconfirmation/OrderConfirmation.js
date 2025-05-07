@@ -312,7 +312,7 @@ const OrderConfirmation = () => {
             />
           </div>
           
-          <button type="submit" className="place-order-btn">Place Order</button>
+          <button className="cart_btn2" type="submit">Place Order</button>
         </form>
       </div>
       <ToastContainer />
