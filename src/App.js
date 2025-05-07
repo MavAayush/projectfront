@@ -57,7 +57,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Maincomp />} />
               <Route path="/login" element={<Clerk></Clerk>} />
-              <Route path="/register" element={<Clerk></Clerk>} />
+              {/* <Route path="/register" element={<Clerk></Clerk>} /> */}
               <Route path="/password-reset" element={<PasswordReset />} />
               <Route path="/forgotpassword/:id/:token" element={<ForgotPassword />} />
               <Route path="/getproductsone/:id" element={<Cart />} />
