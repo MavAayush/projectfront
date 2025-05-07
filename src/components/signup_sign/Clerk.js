@@ -6,17 +6,19 @@ import { LoginContext } from '../context/ContextProvider';
 // Use either the deployed URL or localhost depending on your environment
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
   ? 'https://projectbackend-d5qv.onrender.com' 
-  : 'http://localhost:8005'; // Update this port if your local server uses a different port
+  : 'http://localhost:8005'; // Update this port to match your server port
 
 export default function Clerk() {
   const { user, isSignedIn } = useUser();
   const navigate = useNavigate();
   const { setAccount } = useContext(LoginContext);
   const [status, setStatus] = useState('');
+  const [error, setError] = useState('');
 
   useEffect(() => {
     if (isSignedIn && user) {
       console.log("Clerk user signed in:", user);
+      console.log("Clerk user ID:", user.id);
       registerClerkUser(user);
     }
   }, [isSignedIn, user]);
@@ -24,10 +26,12 @@ export default function Clerk() {
   const registerClerkUser = async (user) => {
     try {
       setStatus('Checking if user exists in database...');
+      setError('');
       console.log("Attempting to register Clerk user with ID:", user.id);
+      console.log("API BASE URL:", API_BASE_URL);
       
       // First check if user exists by clerkId
-      const checkUserResponse = await fetch(`https://projectbackend-d5qv.onrender.com"/get-user-by-clerk`, {
+      const checkUserResponse = await fetch(`https://projectbackend-d5qv.onrender.com'/get-user-by-clerk`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -51,7 +55,7 @@ export default function Clerk() {
       setStatus('Registering new user...');
       console.log("User not found, registering new user with Clerk ID:", user.id);
       
-      const registerResponse = await fetch(`https://projectbackend-d5qv.onrender.com"/register-clerk-user`, {
+      const registerResponse = await fetch(`https://projectbackend-d5qv.onrender.com/register-clerk-user`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -75,10 +79,12 @@ export default function Clerk() {
         const errorData = await registerResponse.json();
         console.error("Registration failed:", errorData);
         setStatus(`Registration failed: ${errorData.error || 'Unknown error'}`);
+        setError(errorData.error || 'Unknown error');
       }
     } catch (error) {
       console.error('Error registering user:', error);
       setStatus(`Error: ${error.message}`);
+      setError(error.message);
     }
   };
 
@@ -89,6 +95,7 @@ export default function Clerk() {
         <div style={{marginTop: '20px', textAlign: 'center'}}>
           <p>Successfully signed in with Clerk!</p>
           {status && <p>{status}</p>}
+          {error && <p style={{color: 'red'}}>{error}</p>}
         </div>
       </SignedIn>
     </div>

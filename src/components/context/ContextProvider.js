@@ -3,6 +3,11 @@ import { useUser } from '@clerk/clerk-react';
 
 export const LoginContext = createContext(null);
 
+// Use either the deployed URL or localhost depending on your environment
+const API_BASE_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://projectbackend-d5qv.onrender.com' 
+  : 'http://localhost:8005'; // Update this port to match your server port
+
 const ContextProvider = ({ children }) => {
     const [account, setAccount] = useState("");
     const { user, isSignedIn } = useUser();
@@ -22,7 +27,7 @@ const ContextProvider = ({ children }) => {
     const fetchUserData = async (clerkId) => {
         try {
             // Check if user exists in your database
-            const res = await fetch('https://projectbackend-d5qv.onrender.com/get-user-by-clerk', {
+            const res = await fetch(`https://projectbackend-d5qv.onrender.com/get-user-by-clerk`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +52,7 @@ const ContextProvider = ({ children }) => {
         if (!user) return;
 
         try {
-            const res = await fetch('https://projectbackend-d5qv.onrender.com/register-clerk-user', {
+            const res = await fetch(`https://projectbackend-d5qv.onrender.com/register-clerk-user`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
