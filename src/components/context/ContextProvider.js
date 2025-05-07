@@ -22,7 +22,7 @@ const ContextProvider = ({ children }) => {
     const fetchUserData = async (clerkId) => {
         try {
             // Check if user exists in your database
-            const res = await fetch('https://projectbackend-d5qv.onrender.com"/get-user-by-clerk', {
+            const res = await fetch('https://projectbackend-d5qv.onrender.com/get-user-by-clerk', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ const ContextProvider = ({ children }) => {
         if (!user) return;
 
         try {
-            const res = await fetch('https://projectbackend-d5qv.onrender.com"/register-clerk-user', {
+            const res = await fetch('https://projectbackend-d5qv.onrender.com/register-clerk-user', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
