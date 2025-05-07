@@ -1,0 +1,276 @@
+.banner-slider {
+    width: 100%;
+    height: 83vh; /* Full viewport height */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+.banner-slide1, .banner-slide2 {
+    position: relative;
+    width: 100%;
+    height: 83vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+.banner-slide1 {
+    background: url("http://localhost:8005/images/card1.jpg") no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.banner-slide2 {
+    background: url("http://localhost:8005/images/card2.jpg") no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 1px;      
+    left: 30px;       
+    z-index: 2;
+    color: white;
+    text-align: left;   
+    max-width: 800px;
+    padding: 20px;
+    font-family: 'Lora', serif;
+}
+
+.banner-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color:white;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.banner-slide1::before,
+.banner-slide2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Default (desktop) */
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    .banner-slider,
+    .banner-slide1,
+    .banner-slide2 {
+        height: 60vh;
+    }
+
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner-content p {
+        font-size: 1rem;
+    }
+
+    .banner-content {
+        bottom: 20px;
+        left: 20px;
+        padding: 15px;
+        max-width: 90%;
+    }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+    .banner-slider,
+    .banner-slide1,
+    .banner-slide2 {
+        height: 60vh;
+    }
+    
+    .banner-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .banner-content p {
+        font-size: 0.9rem;
+    }
+
+    .banner-content {
+        bottom: 10px;
+        left: 10px;
+        padding: 10px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Toastify__toast-container {
+        width: 80% !important;
+        font-size: 14px;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        right: auto !important;
+        bottom: auto !important;
+    }
+
+    .Toastify__toast {
+        padding: 10px;
+        text-align: center;
+        position: relative; /* needed for the close icon positioning */
+    }
+
+    .Toastify__close-button {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        font-size: 18px;
+        color: #fff; /* or any color that fits your toast bg */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .banner-slider {
+    width: 100%;
+    height: 73vh; 
+    overflow: hidden;
+}
+
+.banner-slide1 {
+    position: relative;
+    width: 100%;
+    height: 70vh; 
+    background: url("http://localhost:8005/images/card1.jpg") no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+}
+
+.banner-slide2 {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background: url("http://localhost:8005/images/card2.jpg") no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2.5%;
+}
+
+.banner-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.banner-content1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    font-family: 'Lora', serif; 
+}
+
+.banner-content2 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    font-family: 'Lora', serif; 
+}
+
+.banner-content1 h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.banner-content1 p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+
+.banner-content2 h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.banner-content2 p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+
+
+ */

@@ -1,0 +1,115 @@
+.footer-page-container4 {
+    margin-top: 100px;
+    padding: 40px 80px;
+    background-color: #f7f7f7;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .footer-page-container4 h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color:#d7a86e;
+  }
+  
+  .footer-page-content4 {
+    background-color: #fff;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    line-height: 1.8;
+  }
+  
+  /* Terms Section */
+  .terms-section {
+    padding: 10px 0;
+  }
+  
+  .last-updated {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .terms-notice {
+    background-color: #fff7e6;
+    padding: 20px;
+    border-left: 5px solid #ffb84d;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .terms-notice p {
+    margin: 0;
+    color: #884d00;
+    font-weight: bold;
+  }
+  
+  .terms-section h2 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color:#d7a86e;
+  }
+  
+  .terms-section p {
+    margin-bottom: 15px;
+  }
+  
+  .terms-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .terms-section li {
+    margin-bottom: 8px;
+  }
+  
+  /* Links */
+  .terms-section a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .terms-section a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Section */
+  address {
+    font-style: normal;
+    line-height: 1.6;
+    background-color: #f2f2f2;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-page-container4 {
+      padding: 20px;
+    }
+  
+    .footer-page-container4 h1 {
+      font-size: 28px;
+    }
+  
+    .footer-page-content4 {
+      padding: 20px;
+    }
+  
+    .terms-section h2 {
+      font-size: 20px;
+    }
+
+    .terms-notice{
+      font-size: 14px;
+    }
+  }
+  

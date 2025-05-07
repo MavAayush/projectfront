@@ -1,0 +1,261 @@
+.cart_section{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 100vh;
+}
+
+.cart_section .cart_container{
+    width: 95%;
+    margin:0 auto;
+    display: flex;
+    padding:50px 20px;
+}
+
+.cart_container .left_cart{
+    flex: .5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left_cart img{
+    width:50%;
+    margin-bottom: 30px;
+}
+
+.left_cart .cart_btn{
+    display: flex;
+    justify-content:flex-start;
+}
+
+.cart_btn button{
+    margin-right: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+.cart_btn .cart_btn1{
+    /* background-color:#f8d00a; */
+    background-color: #D7A86E;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #0F1111;
+    width: 200px;
+    letter-spacing: .5px;
+    font-size: 14px;
+    box-shadow: 0 0 10px -5px rgba(0,0,0,.5);
+}
+
+.cart_btn .cart_btn1:hover{
+    background-color:#f1cc13;
+}
+
+.cart_btn .cart_btn2{
+    /* background-color: #D7A86E; */
+    background-color:#ec7e12;;
+    letter-spacing: .5px;
+    font-size: 14px;
+    color: #0F1111;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    width: 200px;
+    box-shadow: 0 0 10px -5px rgba(0,0,0,.5);
+}
+
+.cart_btn .cart_btn2:hover{
+    background-color: #ec9615;
+}
+
+.cart_container .right_cart{
+    flex: 0.35;
+    border: 1px solid #c4c4c4;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.right_cart h3{
+    font-weight: 500;
+    font-size: 23px;
+    margin-top:10px;
+}
+
+.right_cart h4{
+    font-weight: 500;
+    font-size: 20px;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.right_cart .mrp{
+    margin-top: 10px;
+}
+
+.right_cart .mrp {
+    text-decoration: line-through;
+    color: #888;
+    font-weight: 500;
+}
+
+
+.right_cart p{
+    color:black;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.right_cart p span {
+    color: #B12704;
+    font-weight: 700;
+    font-size: 19px; 
+}
+
+
+
+.discount_box h5{
+    color: #B12704;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom:10px;
+}
+
+.discount_box h4{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.right_cart .description{
+    font-weight: 600;
+    color: #111;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+/* media query */
+
+@media (max-width:778px){
+    .cart_section{
+        height: auto;
+    }
+    .cart_section .cart_container{
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cart_container .left_cart,
+    .cart_container .right_cart{
+        flex: 1;
+    }
+    .cart_container .right_cart{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:500px){
+    .cart_btn .cart_btn1,
+    .cart_btn .cart_btn2{
+        width: 160px;
+    }
+
+    
+.left_cart .cart_btn{
+    justify-content: center;
+}
+}
+
+
+@media (max-width: 500px) {
+    .cart_section {
+        padding: 20px 10px;
+        top: 70px;
+    }
+
+    .cart_section .cart_container {
+        padding: 20px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart_container .left_cart,
+    .cart_container .right_cart {
+        flex: 1;
+        width: 100%;
+    }
+
+    .left_cart img {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .left_cart .cart_btn {
+        justify-content: center;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .cart_btn button {
+        margin: 0;
+    }
+
+    .cart_btn .cart_btn1,
+    .cart_btn .cart_btn2 {
+        width: 45%; 
+        font-size: 13px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .right_cart {
+        margin-top: 20px;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .right_cart h3,
+    .right_cart h4 {
+        font-size: 18px;
+    }
+
+    .discount_box h5,
+    .discount_box h4 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .cart_section {
+        padding-bottom: 120px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .Toastify__toast-container {
+        width: 80% !important;
+        font-size: 14px;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        right: auto !important;
+        bottom: auto !important;
+    }
+
+    .Toastify__toast {
+        padding: 10px;
+        text-align: center;
+        position: relative; /* needed for the close icon positioning */
+    }
+
+    .Toastify__close-button {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        font-size: 18px;
+        color: #fff; /* or any color that fits your toast bg */
+    }
+}

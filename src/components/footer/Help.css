@@ -1,0 +1,195 @@
+.footer-page-container9{
+  margin-top: 100px;
+  padding: 20px 40px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.footer-page-container9 h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #d7a86e;
+}
+
+
+
+.help-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .help-tabs button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .help-tabs button.active {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .help-tabs button:hover {
+    background-color: #d7a86e;
+  }
+  
+  .faq-section p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .faq-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    background-color: #fafafa;
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.05rem;
+    color:#d7a86e;
+  }
+  
+  .faq-question.active {
+    color: #0077cc;
+  }
+  
+  .faq-icon {
+    font-size: 1.25rem;
+  }
+  
+  .faq-answer {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .contact-support-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .support-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  .support-option {
+    flex: 1 1 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .support-option h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #222;
+  }
+  
+  .support-option p {
+    font-size: 0.95rem;
+    margin: 6px 0;
+  }
+  
+  .chat-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .chat-button:hover {
+    background-color: #005fa3;
+  }
+  
+  .support-form {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .support-form h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-page-container9 h1{
+      font-size: 32px;
+    }
+
+
+    .support-options {
+      flex-direction: column;
+    }
+  
+    .support-form {
+      padding: 20px;
+    }
+  }
+  
